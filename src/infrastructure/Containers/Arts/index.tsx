@@ -22,7 +22,7 @@ const Arts:React.FC = () => {
         </ul>
       </section>
     </Col>
-    <Col lg={{span:12, offset:0}} xs={{offset:6}} id="section1Img">
+    <Col lg={{span:12, offset:0}} xs={{offset:6, span: 22}} id="section1Img">
       <img src={section3} id="imgSection3"/>
     </Col>
   </Row>
