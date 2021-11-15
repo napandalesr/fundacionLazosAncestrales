@@ -7,9 +7,9 @@ import { _Routes } from "../../Utils/constanst";
 import "./style.scss";
 
 const Arts:React.FC = () => {
-  return <div id={_Routes.WeDo.slice(0, _Routes.WeDo.length)}>
+  return <div id={_Routes.Arts.slice(1, _Routes.Arts.length)}>
   <Row>
-    <Col span={11} offset={1}>
+    <Col lg={{span:11, offset:1}} xs={{span:22}}>
       <section id="section1">
         <Divider orientation="left"><h2>Artes</h2></Divider>
         <p>La Fundación educativa Lazos Ancestrales reconoce la culturalidad como  un mecanismo que asiste la integración  de niños, adolescentes y jóvenes; además de mejorar  procesos de convivencia a partir de   la practica y realización de diferentes actividades lúdica que les permite recrear el mundo que les rodea con una mirada asertiva.</p>
@@ -22,7 +22,7 @@ const Arts:React.FC = () => {
         </ul>
       </section>
     </Col>
-    <Col span={12} id="section1Img">
+    <Col lg={{span:12, offset:0}} xs={{offset:6}} id="section1Img">
       <img src={section3} id="imgSection3"/>
     </Col>
   </Row>

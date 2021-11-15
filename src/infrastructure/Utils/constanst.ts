@@ -1,7 +1,10 @@
 export const _Routes = {
   Login: "/",
   Register: "/register",
-  Home: "/",
+  Home: "/Home",
   About: "/about",
-  WeDo: "/wedo"
+  WeDo: "/wedo",
+  Arts: "/arts",
+  Contact: "/contact",
+  Programs: "/programs"
 };

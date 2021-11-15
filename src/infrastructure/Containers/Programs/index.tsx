@@ -2,16 +2,17 @@ import { Col, Divider, Row } from "antd";
 import React from "react";
 
 import section4 from "../../images/section4.jpg";
+import { _Routes } from "../../Utils/constanst";
 
 import "./style.scss";
 
 const Programs:React.FC = () => {
-  return <div>
+  return <div id={_Routes.Programs.slice(1, _Routes.Programs.length)}>
     <Row>
-      <Col span={12}  id="section2Img">
-      <img src={section4} id="imgSection3"/>
+      <Col lg={{span:12, offset:1}} xs={{span:16, offset:1}} id="section2Img">
+        <img src={section4} id="imgSection3"/>
       </Col>
-      <Col span={11}  offset={1}>
+      <Col lg={{span:10, offset:1}} xs={{span:22, offset:1}}>
         <section id="section2">
           <Divider orientation="left"><h2>Programas</h2></Divider>
           <p>Modelos flexibles</p>

@@ -4,7 +4,7 @@ import CarouselMain from "../../Components/Carousel";
 import { _Routes } from "../../Utils/constanst";
 
 const Main:React.FC = () => {
-  return <div id={_Routes.WeDo.slice(0, _Routes.Home.length)}>
+  return <div id={_Routes.Home.slice(1, _Routes.Home.length)}>
     <CarouselMain/>
   </div>;
 };

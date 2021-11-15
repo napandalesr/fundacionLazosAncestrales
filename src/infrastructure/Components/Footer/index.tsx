@@ -1,10 +1,10 @@
 import React from "react";
-import { Row } from "antd";
+import { BackTop, Row } from "antd";
 
 import "./style.scss";
 
 const Footer:React.FC = () => {
-  return <Row id="footer">Footer</Row>;
+  return <Row id="footer"><BackTop/> Footer</Row>;
 };
 
 export default Footer;

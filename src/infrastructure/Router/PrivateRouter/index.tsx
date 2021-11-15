@@ -8,6 +8,7 @@ import { _scroll } from "../../Redux/actions/scrollAction";
 import { _width } from "../../Redux/actions/widthAction";
 
 import { _Routes } from "../../Utils/constanst";
+import { Navigate } from "react-router-dom";
 
 const PrivateRouter:React.FC = () => {
   const dispatch = useDispatch();
@@ -17,17 +18,18 @@ const PrivateRouter:React.FC = () => {
   };
 
   const screenAnimation = () => {
+    console.log(window.screen.width);
+    
     dispatch(_width(window.screen.width));
   };
 
-  React.useEffect(()=>{
-    window.onscroll = () => scrollAnimation();
+  window.onscroll = () => scrollAnimation();
     window.onresize = () => screenAnimation();
-  });
 
   return <Routes>
     <Route path={`${_Routes.Home}`} element={<Home/>}/>
     <Route path={`${_Routes.WeDo}`} element={<WeDo/>}/>
+    <Route path="/" element={<Navigate to = {`${_Routes.Home}`}/>}/>
   </Routes>;
 };
 

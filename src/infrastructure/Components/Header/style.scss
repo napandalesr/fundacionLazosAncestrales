@@ -2,6 +2,7 @@
   position: fixed;
   z-index: 20;
   width: 100%;
+  transition: 0.5s;
 }
 #logo {
   width: 130px;
@@ -10,7 +11,7 @@
 }
 
 .navItem {
-  padding: 25px 10px !important;
+  padding: 20px 10px !important;
   transition: 0.5s;
 }
 
