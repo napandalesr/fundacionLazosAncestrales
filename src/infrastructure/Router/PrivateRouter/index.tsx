@@ -18,13 +18,14 @@ const PrivateRouter:React.FC = () => {
   };
 
   const screenAnimation = () => {
-    console.log(window.screen.width);
-    
     dispatch(_width(window.screen.width));
   };
 
-  window.onscroll = () => scrollAnimation();
+  React.useEffect(()=>{
+    dispatch(_width(window.screen.width));
+    window.onscroll = () => scrollAnimation();
     window.onresize = () => screenAnimation();
+  },[]);
 
   return <Routes>
     <Route path={`${_Routes.Home}`} element={<Home/>}/>
