@@ -78,10 +78,30 @@ const Header:React.FC = () => {
       Contacto</Col>
       </>
     }
-    <Drawer title="Basic Drawer" placement="right" onClose={onClose} visible={visible}>
-      <p>Some contents...</p>
-      <p>Some contents...</p>
-      <p>Some contents...</p>
+    <Drawer placement="right" onClose={onClose} visible={visible}>
+    <Col 
+    className={(scroll >= getScroll(_Routes.Home.slice(1, _Routes.Home.length)) && scroll <= getScroll(_Routes.About.slice(1, _Routes.About.length))) ? "navItem active": "navItem"} 
+    offset={1} onClick={()=>{setScroll(_Routes.Home.slice(1, _Routes.About.length)); }}>Inicio</Col>
+    <Col
+    className={(scroll >= getScroll(_Routes.About.slice(1, _Routes.About.length)) && scroll <= getScroll(_Routes.WeDo.slice(1, _Routes.WeDo.length))) ? "navItem active": "navItem"}
+    onClick={()=>{setScroll(_Routes.About.slice(1, _Routes.About.length)); }}>
+      Sobre nosotros</Col>
+      <Col 
+    className={(scroll >= getScroll(_Routes.WeDo.slice(1, _Routes.WeDo.length)) && scroll <= getScroll(_Routes.Arts.slice(1, _Routes.Arts.length))) ? "navItem active": "navItem"}
+    onClick={()=>{setScroll(_Routes.WeDo.slice(1, _Routes.WeDo.length)); }}>
+      ¿Qué hacemos?</Col>
+      <Col 
+    className={(scroll >= getScroll(_Routes.Arts.slice(1, _Routes.Arts.length)) && scroll <= getScroll(_Routes.Programs.slice(1, _Routes.Programs.length))) ? "navItem active": "navItem"}
+    onClick={()=>{setScroll(_Routes.Arts.slice(1, _Routes.Arts.length)); }}>
+      Artes</Col>
+      <Col 
+    className={(scroll >= getScroll(_Routes.Programs.slice(1, _Routes.Programs.length)) && scroll <= getScroll(_Routes.Contact.slice(1, _Routes.Contact.length))) ? "navItem active": "navItem"}
+    onClick={()=>{setScroll(_Routes.Programs.slice(1, _Routes.Programs.length)); }}>
+      Programas</Col>
+      <Col 
+    className={(scroll >= getScroll(_Routes.Contact.slice(1, _Routes.Contact.length))) ? "navItem active": "navItem"}
+    onClick={()=>{setScroll(_Routes.Contact.slice(1, _Routes.Contact.length)); }}>
+      Contacto</Col>
     </Drawer>
   </Row>;
 };

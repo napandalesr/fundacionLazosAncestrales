@@ -1,4 +1,5 @@
 import React from "react";
+import { EmailService } from "../../../domain/services/email.service";
 
 import AboutMain from "../../Containers/AboutMain";
 import Arts from "../../Containers/Arts";
@@ -10,6 +11,13 @@ import WeDoMain from "../../Containers/WeDoMain";
 import "./style.scss";
 
 class Home extends React.Component {
+
+  async sendEmail () {
+    window.location.assign("https://wa.me/3104320575");
+    
+    await new EmailService().create();
+  }
+
   render() {
     return <div id="home">
       <Main/>
@@ -17,7 +25,7 @@ class Home extends React.Component {
       <WeDoMain/>
       <Arts/>
       <Programs/>
-      <Contact/>
+      <Contact sendEmail={this.sendEmail}/>
     </div>;
   }
 }

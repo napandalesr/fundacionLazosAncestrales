@@ -4,10 +4,11 @@ import { _Routes } from "../../Utils/constanst";
 
 import "./style.scss";
 
-const Contact:React.FC = () => {
-  const onFinish = (values:any) => {
-    console.log(values);
-  };
+type ContactProps = {
+  sendEmail: any
+}
+
+const Contact:React.FC<ContactProps> = ({sendEmail}) => {
 
   return <div id={_Routes.Contact.slice(1, _Routes.Contact.length)}>
     <Row>
@@ -17,7 +18,7 @@ const Contact:React.FC = () => {
     </Row>
     <Form
     labelCol={{span:6}}
-    onFinish={onFinish}>
+    onFinish={sendEmail}>
       <Row>
         <Col lg={{span:9,offset:1}} xs={{span:22,offset:1}}>
           <Form.Item
@@ -68,7 +69,7 @@ const Contact:React.FC = () => {
       </Row>
       <Row>
         <Col offset={10}>
-          <Button type="primary">Enviar</Button>
+          <Button type="primary" htmlType="submit">Enviar</Button>
         </Col>
       </Row>
     </Form>
