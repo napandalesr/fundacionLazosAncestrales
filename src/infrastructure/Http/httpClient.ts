@@ -1,4 +1,6 @@
 import axios, { AxiosRequestHeaders } from 'axios';
+
+axios.defaults.baseURL=process.env.REACT_APP_BASE_URL;
 let headers:AxiosRequestHeaders={
   'Content-Type': 'application/json'
 };
