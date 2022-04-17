@@ -36,6 +36,7 @@ class Home extends React.Component {
   render() {
     return <div id="home">
       <Main/>
+      <h1>Fundación lazos ancestrales</h1>
       <AboutMain/>
       <WeDoMain/>
       <Arts/>
